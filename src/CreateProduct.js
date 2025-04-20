@@ -16,7 +16,7 @@ function CreateProduct() {
       initialPrice: Number(initialPrice)
     };
 
-    axios.post('http://localhost:5121/api/products', productData)
+    axios.post('https://creamyfusionapp.azurewebsites.net/api/products', productData)
       .then(response => {
         setSubmitMessage('Product created successfully!');
         setTimeout(() => {

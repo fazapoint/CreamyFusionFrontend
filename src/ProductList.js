@@ -8,7 +8,7 @@ function ProductList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5121/api/products')
+    axios.get('https://creamyfusionapp.azurewebsites.net/api/products')
       .then(response => {
         setProducts(response.data);
         setLoading(false);
