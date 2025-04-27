@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 function CreateProduct() {
   const [name, setName] = useState('');
-  const [initialPrice, setInitialPrice] = useState('');
+  const [Price, setPrice] = useState('');
   const [submitMessage, setSubmitMessage] = useState('');
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ function CreateProduct() {
     
     const productData = {
       name: name,
-      initialPrice: Number(initialPrice)
+      Price: Number(Price)
     };
 
     axios.post('https://creamyfusionapp.azurewebsites.net/api/products', productData)
@@ -52,8 +52,8 @@ function CreateProduct() {
             Initial Price:
             <input 
               type="number" 
-              value={initialPrice} 
-              onChange={(e) => setInitialPrice(e.target.value)} 
+              value={Price} 
+              onChange={(e) => setPrice(e.target.value)} 
               required
               style={{ marginLeft: '10px' }}
             />
